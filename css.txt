@@ -1,0 +1,295 @@
+
+/*** TARJETAS INDEX nuestros productos***/
+/* Productos Section */
+.productos {
+    height: 90%;
+    display: grid;
+    margin: .5em;
+    gap: .5em;
+    background-color: var(--color-verde-sombra);
+    border-radius: 0.5em;
+    padding: .5em;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 3fr));
+    justify-content: center;
+}
+
+.tarj-container {
+    display: flex;
+    padding: .25rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.tarj-index {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*justify-content define cómo se distribuyen los elementos a lo largo del eje principal del contenedor flexible. El eje principal puede ser horizontal o vertica*/
+    align-items: center;
+    padding: .5em;
+    margin: 0;
+    border-radius: .25em;
+    background-color: red;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tarj-img {
+    padding: .5vh;
+    margin: 0;
+    height: 25vh;
+    width: 100%;
+    border-radius: 1em;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.titulo-tarj {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    width: auto;
+    padding: .02em;
+    margin: .05em;
+    /* justify-content: center;   alinea en vertical*/
+    align-items: center;
+    font-weight: 400;
+    text-align: center;
+    /* letter-spacing: .05em; */
+    color: var(--color-texto-blanco);
+    text-transform: uppercase;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+
+    align-items: center;
+    /* Distribuye los elementos de manera centrada verticalmente */
+    justify-content: center;
+    /* Evita que el contenido sobresalga */
+    align-self: center;
+    /*alinea en el eje vertical*/
+    margin-top: auto;
+    /* Empuja el elemento al final */
+    align-items: center;
+    /* Centra verticalmente los elementos hijos */
+    justify-content: center;
+    /* Centra horizontalmente los elementos hijos */
+    height: 100%;
+    /* Asegúrate de que el contenedor tenga una altura establecida */
+
+
+    display: inline-flex;
+    /* Cambiado a 'inline-flex' para asegurar que el botón no inicie un nuevo renglón */
+    align-items: center;
+    /* Centra verticalmente el contenido del botón */
+    justify-content: center;
+    /* Centra horizontalmente el contenido del botón */
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    white-space: nowrap;
+    /* Evita que el texto dentro del botón se divida en varios renglones */
+    /* Establece un alto fijo para el botón (ajústalo según tus necesidades) */
+
+
+
+
+
+
+
+
+.imgLogo {
+
+    height: 3.5em;
+    border-radius: 10em;
+    margin: auto;
+}
+
+.titulo {
+    font-size: 2em;
+    padding: .25em;
+    color: var(--gris-oscuro)
+}
+
+.encabezado {
+    margin-left: .5em;
+    padding: .25em;
+}
+
+
+
+
+/* Menú de navegación */
+.menuNav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Tres columnas de igual tamaño */
+    column-gap: .5em;
+    row-gap: .5em;
+    padding-inline: 1em;
+    justify-content: space-between;
+
+}
+
+.menuNav li {
+    flex: 0 0 48%;
+    /* Los elementos ocupan el 48% del ancho del contenedor */
+    margin-bottom: 0.5em;
+    /* Espacio entre los elementos en la parte inferior */
+}
+
+/* Reglas globales para <li> */
+
+li {
+    cursor: pointer;
+    list-style: none;
+    background-color: var(--color-naranja);
+    border-radius: 0.21rem;
+    border: solid 2px var(--color-naranja);
+    padding: 0.25em .5em;
+    font-size: .9em;
+    text-align: center;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+li:hover {
+    background-color: var(--color-verde-claro);
+    border: 2px solid var(--color-texto-negro);
+}
+
+/* Estilo para enlaces dentro de <li> */
+li a {
+    color: var(--color-verde-oscuro);
+    text-decoration: none;
+    display: block;
+    padding: 0.25em 0.5em;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+li a:hover {
+    color: var(--color-texto-blanco);
+}
+
+navbar-toggler {
+    margin-right: 5rem;
+}
+
+/* main */
+main {
+    margin: .5em;
+    margin-top: 0;
+    color: var(--color-texto-negro);
+}
+
+a {
+    color: var(--color-texto-negro);
+    text-decoration: none;
+}
+
+/*** NOSOTROS ***/
+.sobreNosotros {
+    margin-top: .3em;
+}
+
+.sobreNosotros p {
+    text-align: justify;
+    line-height: 1.5em;
+    margin: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+}
+
+
+/***    TIENDA GENERAL    ***/
+.titulos {
+    border: 2px solid var(--color-verde-oscuro);
+    text-transform: uppercase;
+    font-size: 2em;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    background: var(--color-blanco-gris);
+    z-index: 1;
+    /* Asegúrate de que el encabezado se mantenga en la parte superior */
+    padding: 3px 0;
+    margin: 0;
+
+    /* Asegúrate de que no haya márgenes adicionales */
+}
+
+
+
+/*** FOOTER ***/
+.logoWhatsapp {
+    width: 2.5em;
+    position: fixed;
+    right: .5em;
+    bottom: 1em;
+    transition: width 0.3s, border 0.3s;
+    margin: .5em;
+    z-index: 1000;
+    /* Asegura que el logo esté en la parte superior */
+}
+
+.logoWhatsapp:hover {
+    width: 3.5em;
+    border-radius: 2em;
+    border: 3px solid var(--color-verde-claro);
+}
+
+footer {
+    padding: .5emrem;
+    text-align: center;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+}
+
+.seguinos {
+    font-size: .75em;
+    margin-left: 1rem;
+    color: var(--color-texto-negro);
+}
+
+footer p {
+    color: var(--color-texto-negro);
+    font-size: .8rem;
+}
+
+.firma {
+    margin-top: .5em;
+}
+
+.logoRedes {
+    margin-top: 0;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: justify;
+    cursor: pointer;
+    width: 4em;
+    transition: width 0.3s, border 0.3s;
+}
+
+.logoRedes:hover {
+    width: 4.5em;
+    border-radius: 3em;
+    border: 3px solid var(--color-verde-claro);
+}
+
+.none {
+    display: none;
+}
+
+/*** Medias queries ***/
+
+@media (max-width: 380px) {
+    .menuNav li {
+
+        color: green;
+    }
+}

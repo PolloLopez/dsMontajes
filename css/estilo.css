@@ -1,0 +1,316 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Asegura que padding y border se incluyan en el ancho y alto total */
+}
+
+/* variables */
+:root {
+    --azul: #1E3A5F;
+    /* fondo de header, footer, y secciones clave */
+    --amarillo: #F0A500;
+    /* para resaltar botones y llamadas a la acción */
+    --gris-claro: #F5F5F5;
+    /* areas generales */
+    --gris-oscuro: #333333;
+    /* texto */
+    --naranja: #FF6700;
+    /* iconos, links o detalles pequeños */
+    --metal: #A5A5A5;
+    /* detalles adicionales u hover */
+    --blanco: #fafafa;
+}
+
+/* body, contiene el header, main y footer */
+
+body {
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    font-family: 'Rakkas', sans-serif; 
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .55em;
+    background-color: var(--azul);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 4.5em;
+    margin: .5em;
+    border-radius: 2.5em;
+}
+
+h1, h2, h3 {
+    font-family: 'Rakkas', sans-serif;
+}
+
+body, p, a, li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: var(--blanco);
+    font-size: 1.7em;
+    max-width: 40%;
+    font-weight: 400;
+}
+
+h2{
+    margin-left: .45em;
+    margin-bottom: .2em;
+}
+
+.nav-bar {
+    margin-right: .5em;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: .75em;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.nav-bar a:hover {
+    color: var(--metal);
+}
+
+
+section {
+    padding: 1em;
+    background-color: var(--gris-claro);
+}
+
+.section-nosotros p {
+    display: flex;
+    margin-inline: 2em;
+}
+
+/* Servicios */
+.servicios-container {
+    display: flex;
+    gap: 1.75em;
+    border-radius: 0.5em;
+}
+
+.servicio {
+    background-color: var(--metal);
+    border-radius: 15px ;
+    width: 35vh;
+    margin: auto;
+    height: 20em;
+}
+
+.servicio-index {
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+    border-radius: 11.25em;
+    box-sizing: border-box;
+}
+
+.serv-img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 1em;
+    margin-bottom: .5em;
+}
+
+.serv-img:hover {
+    height: 27vh;
+}
+
+.titulo-servicio {
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    color: var(--color-texto-blanco);
+    margin-bottom: .75em;
+    height: 1.5em;
+}
+
+.servicio-descripcion {
+    font-size: 1em;
+    margin-inline: .75em;
+    margin-bottom: 1em;
+    line-height: 1.2em;
+}
+
+/* Carrusel */
+.clientes-logos {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    padding: .5em;
+    overflow: hidden;
+}
+
+.logoCliente img {
+    width: auto; /* Mantiene la proporción de la imagen */
+    max-height: 5em;
+    transition: transform 0.3s ease;
+    justify-content: center;
+    margin: 1em;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+}
+
+.logoCliente img:hover {
+    transform: scale(1.25); /* Efecto hover para aumentar el logo */
+}
+
+/* Ajustar las imágenes dentro de la sección "Proyectos" */
+.proyecto img {
+    height: 200px; /* Controla la altura fija */
+    object-fit: cover; /* Asegura que las imágenes no se deformen */
+    border-radius: 0.5em;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para las imágenes */
+.proyecto img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+
+
+button {
+    background-color: var(--amarillo);
+    color: var(--gris-oscuro);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--naranja);
+    color: white;
+}
+.contacto {
+    height: 5em;
+}
+
+
+footer {
+    padding:.75em;
+    background-color: var(--azul);
+    color: var(--gris-claro);
+}
+@media (max-width: 1024px) {
+
+    /* Estilos para tablets */
+
+    .container {
+        width: 90%; /* Ajustar el ancho de contenedores */
+    }
+
+    .proyecto img {
+        height: 150px; /* Reducir la altura en pantallas más pequeñas */
+    }
+
+    .nav-bar {
+        flex-direction: column;   /* Cambiar menú a vertical */
+    }
+
+    .nav-bar ul {
+        gap: .75em;
+    }
+
+    .nav-bar a {
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 800px) {
+    .clientes-logos {
+        width: 95%;
+        margin: auto;
+    }
+    .header {
+        padding: .25em;
+    }
+    .logo img{
+        margin-right: .5em;
+    }
+
+    .nav-bar ul {
+        gap: .5em;
+    }
+
+    .nav-bar a {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.15em;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .proyecto img {
+        height: 120px;
+    }
+
+    .nav-bar {
+        max-width: 60%; 
+    }
+
+    /* Reorganizar los elementos internos en dos columnas */
+    .nav-bar ul {
+        display: grid; /* Utilizar grid para organizar los enlaces */
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+        gap: .35em; /* Espaciado entre los elementos */
+        max-width: 100%; /* Asegura que no se desborde */
+    }
+
+    /* Ajustar el tamaño de los enlaces */
+    .nav-bar a {
+        font-size: 1.2em; /* Ajustar tamaño del texto */
+        text-align: center; /* Centrar los enlaces */
+    }
+
+    .servicio {
+        height: 22em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .proyecto img {
+        height: 100px; /* Ajuste final para pantallas móviles */
+    }
+
+    .nav-bar a {
+        font-size: .6em;
+    }
+    .nav-bar {
+        margin-right: .25em;
+    }
+    
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DS Montajes Industriales." />
+    <meta name="keywords" content="Montajes industriales, Maquinaria pesada, Soluciones industriales personalizadas" />
+    <title>DS Montajes</title>
+    <!-- Icono en la pestaña -->
+    <link rel="icon" type="image/x-icon" href="./img/DSLogo.png" />
+    <!-- ICONOS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <!-- CSS MIO -->
+    <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+    <header>
+    <div class="logo">
+        <a href="index.html"
+        ><img class="imgLogo" src="./img/DSLogo.png" alt="Logo empresa"
+        /></a>
+        <h1>Montajes Industriales</h1>
+    </div>
+
+    <nav class="nav-bar">
+        <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <!-- Información sobre la empresa -->
+        <li><a href="#servicios">Servicios</a></li>
+        <!-- Detalles de los servicios que ofrece la empresa -->
+        <li><a href="#clientes">Clientes</a></li>
+        <!-- Casos de éxito o proyectos destacados. -->
+        <li><a href="#proyectos">Proyectos</a></li>
+        <!-- Lista de clientes o empresas con las que han trabajado. -->
+        <li><a href="#contactanos">Contacto</a></li>
+        <!-- Un formulario o información de contacto. -->
+        </ul>
+    </nav>
+    </header>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="section-nosotros">
+    <h2>Nosotros</h2>
+    <p>
+    En DS Montajes Industriales nos especializamos en montajes industriales de
+    sistemas de produccion en linea y equipamiento general, como asi tambien
+    de la maquinaria pesada desde 1980. Hemos trabajado en empresas nacionales
+    e internacionales, adaptándonos a los protocolos de seguridad y ofreciendo
+    soluciones personalizadas para cada cliente.</p>
+    </section>
+
+    <!-- SERVICIOS // podrian ser tarjetas //-->
+    <section id="servicio">
+        <h2>Servicios</h2>
+        <div class="servicios-container"> 
+
+        <div class="servicio">
+            <!-- <i class="bi bi-gear"></i> -->
+            <img class="serv-img" src="/img/cintaTransportadora.jfif" alt="Cinta transportadora">
+            <h3 class="titulo-servicio">Montaje</h3>
+            <p class="servicio-descripcion">Instalación de maquinaria pesada para industrias.</p>
+        </div>
+
+        <div class="servicio">
+            <!-- <i class="bi bi-tools"></i> -->
+            <img class="serv-img" src="/img/instalacion.jfif" alt="Cinta transportadora">
+            <h3 class="titulo-servicio">Diseño</h3>
+            <p class="servicio-descripcion">Creación de maquinaria a medida según las necesidades del cliente.</p>
+        </div>
+        <div class="servicio">
+            <!-- <i class="bi bi-building"></i> -->
+            <img class="serv-img" src="/img/fabric.jpg" alt="Cinta transportadora">
+            <h3 class="titulo-servicio">Consultoría</h3>
+            <p class="servicio-descripcion">Asesoramiento técnico para mejorar la eficiencia en procesos industriales.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- CLIENTES -->
+    <section id="clientes" class="section-clientes">
+        <h2>Clientes</h2>
+        <p>Hemos trabajado con grandes empresas de diferentes sectores industriales, tales como:</p>
+
+        <!--  podria ser un carrousel de logos   -->
+        <!-- <div> CARROUSEL DE LOGOS, testimonios</div> -->
+        <!-- <ul>
+            <li>Coca Cola</li>
+            <li>Bonafide</li>
+            <li>La Serenisima</li>
+            <li>Mars</li>
+            <li>Repsol</li>
+        </ul> -->
+
+
+        <!-- Carrusel de Logos -->
+    <div class="clientes-logos">
+        <div class="logoCliente">
+            <img src="./img/logoCocaCola.png" alt="Coca Cola">
+            <img src="./img/logoBonafide.png" alt="Bonafide"/>
+            <img src="./img/logoLaSerenisima.png" alt="La Serenisima"/>
+            <img src="./img/logoMars.png" alt="Mars"/>
+            <img src="./img/logoRepsol.png" alt="Repsol"/>
+        </div>
+    </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section-proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyectos-container">
+            <div class="proyecto">
+                <img src="./img/pastas12.png" alt="Proyecto 1" />
+                <h3>Creacion a pedido</h3>
+                <p>Creacion de cinta transportadora para botellas, aumentando notablemente la velocidad y calidad de empaquetado.</p>
+            </div>
+            <div class="proyecto">
+                <img src="./img/pastas19.png" alt="Proyecto 2" />
+                <h3>Creacion de repuesto</h3>
+                <p>Se crea la compuerta de apertura del silo, mejorando su sistema para mayor seguridad del operario y mejor cuidado del producto.</p>
+            </div>
+            <div class="proyecto">
+                <img src="./img/pastas24.png" alt="Proyecto 3" />
+                <h3>Desmontado y montado de Maquinaria</h3>
+                <p>Se traslada de una planta a la otra una fabrica completa de alfajores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTANOS -->
+    <!-- <section id="contactanos" class="section-contactanos">
+        <h2>Contactanos</h2>
+        <form action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+        </form>
+    </section> -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+        <p>&copy; 2024 DS Montajes Industriales. Todos los derechos reservados.</p>
+
+        <!-- <div class="social-media">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div> -->
+        </div>
+        <div>
+            <h2 class="titulos">Contactanos</h2>
+        <a href="mailto:info@dsmontajes.com.ar">
+        <img class="contacto" src="./img/logo.Gmail.png" alt="Logo mail"/>
+        <a href="https://api.whatsapp.com/send?phone=542324589620&text=Hola,%20DS%20quiero%20hablar%20con%20ustedes"
+            target="_blank">
+            <img class="contacto" src="img/whatsapp.png" alt="Logo de whatsapp"></a>
+        <p>info@dsmontajes.com.ar
+            | Tel: +54 11 1234-5678</a>
+        </p>
+        </div>
+    </footer>
+
+    </body>
+</html>
+</body>
+</html>
