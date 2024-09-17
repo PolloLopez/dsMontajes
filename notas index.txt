@@ -90,6 +90,24 @@ er>
             <img class="logoWhatsapp" src="img/whatsapp.png" alt="Logo de whatsapp">
             -->
         </a>
+
+
+            <!-- <section id="contactanos" class="section-contactanos">
+        <h2>Contactanos</h2>
+        <form action="#" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+        </form>
+    </section> -->
+
+    
         </div>
 
 
@@ -124,6 +142,16 @@ er>
             <a href="https://www.instagram.com/" target="_blank">
                 <img class="logoRedes" src="img/logoInstagram.png" alt="Visitanos en Instagram">
             </a>
+
+
+                    <!-- <div class="social-media">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div> -->
+
+
+        
         </div>
         <div class="firma">
             <h6>DS montajes Industriales SRL - Todos los derechos reservados</h6>
