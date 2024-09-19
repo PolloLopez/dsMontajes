@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
     /* Asegura que padding y border se incluyan en el ancho y alto total */
 }
 
@@ -32,28 +33,46 @@
 body {
     background-color: var(--gris-claro);
     color: var(--gris-oscuro);
-    font-family: 'Rakkas', sans-serif; 
 }
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: .5em;
     background-color: var(--azul);
+    justify-content: space-between;
+    padding: 2rem;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+    max-width: 5rem;
+    border-radius: 2.5rem;
 }
 
-.logo img {
-    width: 4.5em;
-    margin: .5em;
-    border-radius: 2.5em;
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: .75rem;
 }
+
+.nav-list a{
+    text-decoration: none;
+    color: var(--gris-claro);
+}
+
+.abrir-menu,
+.cerrrar-menu {
+    display: none;
+    border: 0;
+    font-size: 2rem;
+    color: var(--metal);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cerrar-menu {
+    font-size: 1.5rem;
+}
+
 
 h1, h2, h3 {
     font-family: 'Rakkas', sans-serif;
@@ -61,6 +80,10 @@ h1, h2, h3 {
 
 body, p, a, li {
     font-family: 'Open Sans', sans-serif;
+}
+
+.none {
+    display: none;
 }
 
 p {
@@ -85,34 +108,7 @@ h2{
     font-size: 2em;
 }
 
-.nav-bar {
-    max-width: 55%;
-    justify-items: center;
-}
 
-.nav-bar ul {
-    display: grid; /* Utilizar grid para organizar los enlaces */
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
-    gap: .5em; /* Espaciado entre los elementos */
-    list-style: none;
-    margin-right: 1.5em;
-}
-
-/* .nav-bar ul {
-    list-style: none;
-    display: flex;
-    gap: .5em;
-} */
-
-.nav-bar a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-}
-
-.nav-bar a:hover {
-    color: var(--metal);
-}
 
 .nosotros, .divServicios, .clientes, .proyectos, .garantia, .maquinados, .contactos {
     margin: auto;
@@ -143,10 +139,8 @@ h2{
 
 .serv-img {
     width: 100%;
-    min-height: 10em;
-    flex-shrink: 0; /* Evita que la imagen se encoja */
-    flex-grow: 0; /* Evita que la imagen crezca demasiado */
-    object-fit: cover; /* Las imágenes se ajustarán sin deformarse */
+    height: 250px; /* Fija una altura para todas las imágenes */
+    object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
     border-radius: 1em;
     margin-bottom: .5em;
 }
@@ -208,16 +202,19 @@ h2{
     text-transform: uppercase;
 }
 
-.proyecto img {
-    object-fit: cover; /* Asegura que las imágenes no se deformen */
-    border-radius: 0.5em;
+.proyecto-img {
     transition: transform 0.3s ease;
-    width: 25%;
+    min-width: 20%;
+    height: 35vh; /* Fija una altura para todas las imágenes */
+    object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
+    border-radius: 1em;
+    border: 1px solid var(--azul);
+    margin-bottom: .5em;
 }
 
 /* Efecto hover para las imágenes */
 .proyecto img:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    transform: scale(1.19); /* Aumenta ligeramente el tamaño */
 }
 
 .descrip-proyecto {
@@ -229,22 +226,24 @@ h2{
     margin-top: .5em;
 }
 
-button {
-    background-color: var(--amarillo);
-    color: var(--gris-oscuro);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.text-maquinados {
+    background-image: url('/img/DSImg\ \(5\).jpeg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: var(--gris-claro);
+    padding: 1em; /* Ajusta el padding para espaciar el contenido */
+    border-radius: .5em;
 }
 
-button:hover {
-    background-color: var(--naranja);
-    color: white;
+.text-maquinados p {
+    font-size: small;
 }
 
 /* Contacto */
 
 .logoContacto {
+    max-width: 90%;
     width: 6.5em;
     margin: .5em;
 }
@@ -280,4 +279,43 @@ footer p {
 .firmaFooter {
     font-size: .75em;
     text-align: center;
+}
+
+
+/* Medias Queries */
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrrar-menu {
+        display: block;
+    }
+    
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--gris-oscuro);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list a{
+        color: var(--gris-claro);
+    }
 }

@@ -9,62 +9,55 @@
     <!-- Icono en la pestaña -->
     <link rel="icon" type="image/x-icon" href="./img/DSLogo.png" />
     <!-- ICONOS BOOTSTRAP -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- CSS MIO -->
     <link rel="stylesheet" href="css/estilo.css" />
 </head>
 
 <body>
     <header>
-    <div class="logo">
-        <a href="index.html"
-        ><img class="imgLogo" src="./img/DSLogo.png" alt="Logo empresa"
-        /></a>
-        <h1>Montajes Industriales</h1>
-    </div>
-
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#clientes">Clientes</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#garantia">Garantía</a></li>
-            <li><a href="#maquinados">Maquinados</a></li>
-            <li><a href="#maquinados">Repuestos</a></li>
-            <li><a href="#contactanos">Contacto</a></li>
-        </ul>
-    </nav>
+        <img class="logo" src="./img/DSLogo.png" alt="Logo empresa" href="index.html"/>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#maquinados">Maquinados</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- NOSOTROS -->
-    <section id="nosotros" class="nosotros">
+    <section id="nosotros" class="nosotros none">
     <h2>Nosotros</h2>
     <p>
         En DS Montajes Industriales, desde 19***, nos dedicamos a la instalación de sistemas de producción en línea, maquinaria pesada y equipamiento industrial. Nuestra experiencia abarca tanto proyectos nacionales como internacionales, siempre cumpliendo con los más altos estándares de seguridad y ofreciendo soluciones a medida para satisfacer las necesidades específicas de cada cliente</p>
     </section>
 
     <!-- SERVICIOS // podrian ser tarjetas //-->
-    <section id="servicio" class="divServicios">
+    <section id="servicio" class="divServicios none">
         <h2>Servicios</h2>
         <div class="servicios"> 
 
         <div class="servicio">
             <!-- <i class="bi bi-gear"></i> -->
-            <img class="serv-img" src="./img/cintaTransportadora.jfif" alt="Cinta transportadora">
+            <img class="serv-img" src="./img/DSImg (15).jpeg" alt="Cinta transportadora">
             <h3 class="titulo-servicio">Montaje</h3>
             <p class="servicio-descripcion">Montaje de maquinaria pesada: Instalación profesional y segura de maquinaria industrial para diversos sectores.</p>
         </div>
 
         <div class="servicio">
             <!-- <i class="bi bi-tools"></i> -->
-            <img class="serv-img" src="./img/instalacion.jfif" alt="Cinta transportadora">
+            <img class="serv-img" src="./img/DSImg (16).jpeg" alt="Cinta transportadora">
             <h3 class="titulo-servicio">Diseño</h3>
             <p class="servicio-descripcion">Diseño de maquinaria personalizada: Desarrollamos soluciones de maquinaria adaptadas a las necesidades específicas de cada cliente.</p>
         </div>
         <div class="servicio">
             <!-- <i class="bi bi-building"></i> -->
-            <img class="serv-img" src="./img/fabric.jpg" alt="Cinta transportadora">
+            <img class="serv-img" src="./img/DSImg (10).jpeg" alt="Cinta transportadora">
             <h3 class="titulo-servicio">Consultoría</h3>
             <p class="servicio-descripcion">Consultoría técnica: Ofrecemos asesoramiento especializado para optimizar la eficiencia en los procesos industriales.</p>
         </div>
@@ -74,7 +67,7 @@
 
 
     <!-- CLIENTES -->
-    <section id="clientes" class="clientes">
+    <section id="clientes" class="clientes none">
         <h2>Clientes</h2>
         <p>Empresas líderes como Coca Cola, Bonafide, La Serenísima, Mars, Repsol, San Martin, ConverFlex y Bosisio han confiado en nuestros servicios para sus proyectos industriales, respaldando nuestra trayectoria y compromiso con la calidad</p>
 
@@ -94,25 +87,25 @@
     </section>
 
     <!-- PROYECTOS -->
-    <section id="proyectos" class="proyectos">
+    <section id="proyectos" class="proyectos none">
         <h2>Proyectos</h2>
         <div>
             <div class="proyecto">
-                <img src="./img/planoAPedido.png" alt="Proyecto 1" />
+                <img class="proyecto-img" src="./img/planoAPedido.png" alt="Proyecto 1" />
                 <div class="descrip-proyecto">
                 <h3>Trabajo a pedido</h3>
                 <p>Cinta transportadora para botellas: Diseñamos y fabricamos una cinta transportadora que mejoró significativamente la velocidad y calidad del proceso de empaquetado.</p>
             </div>
         </div>
             <div class="proyecto">
-                <img src="./img/compuertaSilo.jfif" alt="Proyecto 2" />
+                <img class="proyecto-img" src="./img/DSImg (14).jpeg" alt="Proyecto 2" />
                 <div class="descrip-proyecto">
                 <h3>Creacion de repuesto</h3>
                 <p>Compuerta para silo: Desarrollamos una compuerta de silo que optimiza la seguridad del operario y protege mejor el producto durante su manipulación.</p>
             </div>
         </div>
             <div class="proyecto">
-                <img src="./img/traslado.jfif" alt="Proyecto 3" />
+                <img class="proyecto-img" src="./img/DSImg (8).jpeg" alt="Proyecto 3" />
                 <div class="descrip-proyecto">
                 <h3>Desmontado y montado de Maquinaria</h3>
                 <p>Desmontaje y traslado de planta industrial: Realizamos el desmontaje, transporte y montaje completo de una planta de producción de alfajores, asegurando la continuidad operativa en su nuevo destino.</p>
@@ -122,7 +115,7 @@
     </section>
 
     <!-- GARANTIA -->
-<section id="garantia" class="garantia">
+<section id="garantia" class="garantia none">
     <h2>Garantía</h2>
     <p>
         Todos nuestros trabajos cuentan con garantía, y nos enorgullecemos de ofrecer calidad, servicio y puntualidad en cada proyecto. Estas características son el sello de nuestra firma y las razones por las que numerosas empresas continúan confiando en nosotros.
@@ -130,15 +123,15 @@
 </section>
 
     <!-- MAQUINADOS Y REPUESTOS -->
-    <section id="maquinados" class="maquinados">
+    <section id="maquinados" class="maquinados none">
         <h2>Maquinados y Repuestos</h2>
-        <p>
+        <p class="text-maquinados">
         En DS Montajes Industriales también ofrecemos un servicio especializado de maquinados y fabricación de repuestos para diversos sectores industriales. Contamos con amplia experiencia en la producción de repuestos para maquinaria lavadora, embotelladora, transportadora, equipos hidráulicos, bancos de frío y condensadores. Además, fabricamos repuestos a medida para plantas procesadoras de productos lácteos y atendemos pedidos personalizados según planos específicos, asegurando soluciones para repuestos no disponibles en el mercado o de dimensiones especiales.
         </p>
     </section>
 
     <!-- CONTACTANOS -->
-    <div class="contactos">
+    <section id="contacto" class="contacto none">
         <h2>Contactanos</h2>
         <!-- Mail -->
         <div class="logosContactos">
@@ -159,7 +152,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-container">
+        <div class="footer-container none">
         <p>&copy; 2024 DS Montajes Industriales - Todos los derechos reservados.</p>
         <div class="datosContactoFooter">
             <p>info@dsmontajes.com.ar - Tel/Fax: +54 02324 431161</p>
@@ -169,6 +162,8 @@
         </div>
         </div>
     </footer>
+
+    <script src="./js/main.js"></script>
     </body>
 </html>
 

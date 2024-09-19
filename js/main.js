@@ -1,21 +1,11 @@
-/*** DIRIGE AL PRODUCTO ***/
-const navLinks = document.querySelectorAll('a[href^="#"]'); // Obtener todos los enlaces que apuntan a secciones dentro de la página
-let carrito = [];
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault();
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible")
+})
 
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-let productos = [];
-
+cerrar.addEventListener("click", () =>{
+    nav.classList.remove("visible");
+})
