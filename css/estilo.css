@@ -60,7 +60,7 @@ header {
 }
 
 .abrir-menu,
-.cerrrar-menu {
+.cerrar-menu {
     display: none;
     border: 0;
     font-size: 2rem;
@@ -72,7 +72,6 @@ header {
 .cerrar-menu {
     font-size: 1.5rem;
 }
-
 
 h1, h2, h3 {
     font-family: 'Rakkas', sans-serif;
@@ -94,44 +93,43 @@ p {
 }
 
 h1 {
-    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    color: var(--azul);
+    padding-top: 1.2rem;
+    margin: auto;
     font-size: 2.2em;
-    max-width: 40%;
     font-weight: 400;
 }
 
 h2{
     font-size: 1.8em;
     margin-left: .75em;
-    margin-block: .75em;
+    margin-block: .25em;
     color: var(--azul);
     font-size: 2em;
 }
-
-
 
 .nosotros, .divServicios, .clientes, .proyectos, .garantia, .maquinados, .contactos {
     margin: auto;
     width: 95%;
 }
 
-
 /* Servicios */
+
 .servicios {
     display: flex;
-    margin: auto;
+    justify-content: space-between; /* Asegura que haya espacio entre las tarjetas */
     gap: 1.75em;
-    border-radius: 0.5em;
-    align-items: stretch; /* Asegura que todas las tarjetas tengan el mismo alto */
+
 }
 
 .servicio {
     background-color: var(--metal);
     border-radius: 15px;
-    width: 32%;
-    /*height: 100%; /* Asegura que cada tarjeta ocupe todo el espacio disponible */
+    width: 30%;
     display: flex;
-    flex-direction: column; /* Para que el contenido interno respete la altura */
+    flex-direction: column;
     padding: .5em;
     box-sizing: border-box;
     flex-grow: 1; /* Permite que esta sección crezca para llenar el espacio */
@@ -286,7 +284,7 @@ footer p {
 
 @media screen and (max-width: 550px) {
     .abrir-menu,
-    .cerrrar-menu {
+    .cerrar-menu {
         display: block;
     }
     
@@ -318,4 +316,88 @@ footer p {
     .nav-list a{
         color: var(--gris-claro);
     }
+
+    header {
+        height: 5rem;
+    }
+
+    .servicios{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .servicio {
+        width: 90%;
+        margin: auto;
+        gap: .25rem;
+        margin-bottom: .5em;
+    }
+
+    .proyecto{
+        display: grid;
+        width: 100%;
+        margin: auto;
+    }
+        
+    .proyecto h3 {
+        font-size: 1.2rem;
+        margin-left: 1.75rem;
+        margin-top: 1rem;
+    }
+
+    .proyecto-img {
+        transition: transform 0.3s ease;
+        min-height: 45vh;
+        width: 90%;
+        margin: auto;
+    }
+
+    .proyecto img:hover {
+        transform: scale(1.1);
+    }
+    
+    .descrip-proyecto {
+        margin: auto;
+        padding-bottom: 3.5rem;
+        padding-inline: .5rem;
+    }  
+
+    /* Clienes */
+
+.clientes-logos {
+    width: 95%;
 }
+
+.logoCliente img {
+    max-height: 2.5em;
+    margin: .5em;
+}
+
+.logosContactos{
+    width: 90%;
+    margin: auto;
+}
+
+footer {
+    font-size: .7rem;
+    margin-block: .1rem;
+}
+
+footer p {
+    justify-content: center;
+    margin: auto;
+}
+
+.datosContactoFooter {
+    font-size: .65rem;
+    margin-block: .5em;
+    
+}
+
+.firmaFooter {
+    font-size: .65em;
+    margin-block: .25rem;
+}
+
+}
+
