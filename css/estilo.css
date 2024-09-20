@@ -40,23 +40,27 @@ header {
     align-items: center;
     background-color: var(--azul);
     justify-content: space-between;
-    padding: 2rem;
+    padding: .5rem;
+    font-size: 1rem;
 }
 
 .logo {
     max-width: 5rem;
     border-radius: 2.5rem;
+    
 }
 
 .nav-list {
     list-style-type: none;
     display: flex;
-    gap: .75rem;
+    padding-inline: .25rem;
+    gap: .65rem;
+    font-size: 1.1rem;
 }
 
 .nav-list a{
     text-decoration: none;
-    color: var(--gris-claro);
+    color: var(--gris-claro);    
 }
 
 .abrir-menu,
@@ -104,13 +108,18 @@ h1 {
 
 h2{
     font-size: 1.8em;
-    margin-left: .75em;
     margin-block: .25em;
     color: var(--azul);
-    font-size: 2em;
 }
 
-.nosotros, .divServicios, .clientes, .proyectos, .garantia, .maquinados, .contactos {
+h3{
+    font-size: 1.25em;
+    text-align: center;
+    margin-block: .1rem;
+    text-transform: uppercase;
+}
+
+.nosotros, .divServicios, .clientes, .proyectos, .garantia, .mecanizados, .contacto {
     margin: auto;
     width: 95%;
 }
@@ -120,14 +129,14 @@ h2{
 .servicios {
     display: flex;
     justify-content: space-between; /* Asegura que haya espacio entre las tarjetas */
-    gap: 1.75em;
+    gap: .75em;
 
 }
 
 .servicio {
     background-color: var(--metal);
-    border-radius: 15px;
-    width: 30%;
+    border-radius: .75rem;
+    width: 31%;
     display: flex;
     flex-direction: column;
     padding: .5em;
@@ -137,51 +146,34 @@ h2{
 
 .serv-img {
     width: 100%;
-    height: 250px; /* Fija una altura para todas las imágenes */
+    height: 40vh; /* Fija una altura para todas las imágenes */
     object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
-    border-radius: 1em;
-    margin-bottom: .5em;
-}
-
-.titulo-servicio {
-    text-align: center;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 1.75em;
-    color: var(--color-texto-blanco);
+    border-radius: .75em;
+    margin-bottom: 1.5em;
 }
 
 .servicio-descripcion {
-    margin-inline: .75em;
+    margin-inline: .5em;
     justify-content: center;
-    margin-bottom: .5em;
-    line-height: 1.2em;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
     flex-grow: 1; /* Permite que la descripción también crezca y ajuste la altura */
 }
 
 /* Clienes */
-.clientes p {
-    margin-left: 1.5em;
-}
+
 .clientes-logos {
-    width: 85%;
+    width: 90%;
     display: flex;
-    justify-content: center;
-    margin: auto;
-    align-items: center;
-    padding-block: 1.5em;
-    overflow: hidden;
     text-align: center;
+    margin: auto;
 }
 
 .logoCliente img {
-    max-height: 5em;
+    max-height: 5rem;
     transition: transform 0.3s ease;
     justify-content: center;
-    margin: 1.25em;
-    justify-items: center;
-    align-items: center;
-    align-self: center;
+    margin: .75rem;
 }
 
 .logoCliente img:hover {
@@ -189,53 +181,77 @@ h2{
 }
 
 /* PROYECTOS */
-.proyecto{
+.proyecto {
     display: flex;
-    margin-left: 1.5em;
-    margin-top: 1em;
+    flex-direction: column;
+    margin-block: 1rem;
+    box-sizing: border-box;
+
 }
 
-.proyecto h3{
-    font-size: 1.25em;
-    text-transform: uppercase;
+.proyecto-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: fit-content; 
 }
 
 .proyecto-img {
+    width: 100%;
     transition: transform 0.3s ease;
-    min-width: 20%;
-    height: 35vh; /* Fija una altura para todas las imágenes */
-    object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
+    height: 55vh;
+    object-fit: cover;
     border-radius: 1em;
     border: 1px solid var(--azul);
-    margin-bottom: .5em;
+    margin: .5rem;
 }
 
-/* Efecto hover para las imágenes */
-.proyecto img:hover {
-    transform: scale(1.19); /* Aumenta ligeramente el tamaño */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: .5rem;
+    border: none;
+    padding: .25em;
+    color: var(--amarillo);
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.descrip-proyecto {
-    margin-left: 1.5em;
-    align-content: center;
+button.prev {
+    left: .25rem;
+}
+
+button.next {
+    right: .25rem;
 }
 
 .descrip-proyecto p {
-    margin-top: .5em;
+    margin-block: 1em;
 }
 
-.text-maquinados {
-    background-image: url('/img/DSImg\ \(5\).jpeg');
+/* MECANIZADOS */
+.text-mecanizados {
+    display: flex;
+    margin: auto;
+    background-image: url('../img/DSImg\ \(5\).jpeg');
     background-size: cover; /* Ajusta el tamaño de la imagen para que cubra toda la sección */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: var(--gris-claro);
-    padding: 1em; /* Ajusta el padding para espaciar el contenido */
+    padding: .5em; /* Ajusta el padding para espaciar el contenido */
     border-radius: .5em;
-}
-
-.text-maquinados p {
-    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: var(--gris-claro);
 }
 
 /* Contacto */
@@ -281,6 +297,28 @@ footer p {
 
 
 /* Medias Queries */
+@media (max-width: 768px){
+    header {
+        font-size: 1rem;
+        padding: .5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+        margin-left: 0;
+        margin-block: .15em;
+    }
+    h3{
+        font-size: 1.25em;    
+    }
+
+    .proyecto-img {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 550px) {
     .abrir-menu,
@@ -298,7 +336,7 @@ footer p {
         position: absolute;
         top: 0;
         right: 0;
-        bottom: 0;
+        bottom: -auto;
         background-color: var(--gris-oscuro);
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
@@ -340,7 +378,6 @@ footer p {
     }
         
     .proyecto h3 {
-        font-size: 1.2rem;
         margin-left: 1.75rem;
         margin-top: 1rem;
     }
@@ -349,7 +386,6 @@ footer p {
         transition: transform 0.3s ease;
         min-height: 45vh;
         width: 90%;
-        margin: auto;
     }
 
     .proyecto img:hover {
