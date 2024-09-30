@@ -77,7 +77,7 @@ header {
     font-size: 1.5rem;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .titulo-producto {
     font-family: 'Rakkas', sans-serif;
 }
 
@@ -90,9 +90,7 @@ body, p, a, li {
 }
 
 p {
-    font-size: 1.25em;
-    margin-left: 1.5em;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     color: var(--gris-oscuro);
 }
 
@@ -102,26 +100,30 @@ h1 {
     color: var(--azul);
     padding-top: 1.2rem;
     margin: auto;
-    font-size: 2.2em;
+    font-size: 2.2rem;
     font-weight: 400;
 }
 
 h2{
-    font-size: 1.8em;
-    margin-block: .25em;
+    font-size: 1.9rem;
     color: var(--azul);
 }
 
-h3{
-    font-size: 1.25em;
+h3 {
+    font-size: 1.75rem;
     text-align: center;
-    margin-block: .1rem;
     text-transform: uppercase;
+    color: var(--azul);
 }
 
-.nosotros, .divServicios, .clientes, .proyectos, .garantia, .mecanizados, .contacto {
+.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados, .ferreteria {
     margin: auto;
-    width: 95%;
+    width: 96%;
+    margin-bottom: 2.5rem;
+}
+
+.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados,p {
+    margin: .5rem .5rem 1rem 1rem ;
 }
 
 /* Servicios */
@@ -130,7 +132,6 @@ h3{
     display: flex;
     justify-content: space-between; /* Asegura que haya espacio entre las tarjetas */
     gap: .75em;
-
 }
 
 .servicio {
@@ -139,7 +140,7 @@ h3{
     width: 31%;
     display: flex;
     flex-direction: column;
-    padding: .5em;
+    padding: .5rem;
     box-sizing: border-box;
     flex-grow: 1; /* Permite que esta sección crezca para llenar el espacio */
 }
@@ -148,12 +149,12 @@ h3{
     width: 100%;
     height: 40vh; /* Fija una altura para todas las imágenes */
     object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
-    border-radius: .75em;
-    margin-bottom: 1.5em;
+    border-radius: .75rem;
+    margin-bottom: 1.5rem;
 }
 
 .servicio-descripcion {
-    margin-inline: .5em;
+    margin-inline: .5rem;
     justify-content: center;
     margin-bottom: 1rem;
     line-height: 1.5rem;
@@ -184,15 +185,12 @@ h3{
 .proyecto {
     display: flex;
     flex-direction: column;
-    margin-block: 1rem;
     box-sizing: border-box;
-
 }
 
 .proyecto-carousel {
     position: relative;
     display: flex;
-    align-items: center;
     overflow: hidden;
     width: 100%;
 }
@@ -201,17 +199,20 @@ h3{
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: fit-content; 
+    max-width: 100%;
 }
 
 .proyecto-img {
     width: 100%;
     transition: transform 0.3s ease;
-    height: 55vh;
+    height: 45dvh;
+    margin: 1rem;
     object-fit: cover;
-    border-radius: 1em;
+    border-radius: 1rem;
     border: 1px solid var(--azul);
-    margin: .5rem;
+    background-color: transparent;
 }
+
 
 button.prev, button.next {
     position: absolute;
@@ -220,9 +221,9 @@ button.prev, button.next {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: .5rem;
     border: none;
-    padding: .25em;
+    padding: .25rem;
     color: var(--amarillo);
-    font-size: 2em;
+    font-size: 2rem;
     cursor: pointer;
     z-index: 1;
 }
@@ -235,55 +236,108 @@ button.next {
     right: .25rem;
 }
 
-.descrip-proyecto p {
-    margin-block: 1em;
+.sef{
+    background-color: var(--metal);
+    border-radius: .5rem;
 }
+
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.carousel-ferreteria {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    gap: 2.5rem;
+
+}
+
+.tarjFerreteria{
+    display: grid;
+    width: 40dvh;
+    border: 1px solid var(--azul);
+    border-radius: .75rem;
+    background-color: var(--gris-claro);
+}
+
+.producto-img {
+    justify-content: center;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: auto;
+    object-fit: cover;
+    background-color: transparent;
+    height: 40dvh; /* Fija una altura para todas las imágenes */
+}
+
+.titulo-producto{
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--azul);
+    align-content: flex-end;
+}
+
+.descrip-producto {
+    margin: auto;
+    font-size: 1rem;
+    padding-bottom: .5rem;
+    padding-inline: .75rem;
+}
+
+
+
+
 
 /* MECANIZADOS */
 .text-mecanizados {
     display: flex;
     margin: auto;
-    background-image: url('../img/DSImg\ \(5\).jpeg');
-    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra toda la sección */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: var(--gris-claro);
-    padding: .5em; /* Ajusta el padding para espaciar el contenido */
-    border-radius: .5em;
+    /* background-image: url('../img/DSImg\ \(5\).jpeg'); */
+    background-size: cover; /* que cubra toda la sección */
+    background-position: center; /* Centra */
+    background-repeat: no-repeat; /* Evita que se repita */
+    color: var(--gris-oscuro);
+    padding: .5rem;
+    border-radius: .5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    color: var(--gris-claro);
 }
 
 /* Contacto */
 
 .logoContacto {
     max-width: 90%;
-    width: 6.5em;
-    margin: .5em;
+    width: 6.5rem;
+    margin: .5rem;
 }
 
 .logoContacto:hover {
-    width: 5.5em;
+    width: 5.5rem;
     border: 3px solid var(--color-verde-claro);
 }
 
 .logosContactos {
     display: flex;
-    gap: 2.5em;
+    gap: 2.5rem;
     justify-content: center;
 }
 
 .datosContactoFooter {
     display: flex;
-    font-size: .75em;
-    margin-block: .25em;
+    font-size: .75rem;
+    margin-block: .25rem;
     justify-content: center;
 }
 
 footer {
     display: flex;
     justify-content: center;
-    padding:.75em;
+    padding:.75rem;
     background-color: var(--azul);
 }
 footer p {
@@ -291,7 +345,7 @@ footer p {
 }
 
 .firmaFooter {
-    font-size: .75em;
+    font-size: .75rem;
     text-align: center;
 }
 
@@ -309,13 +363,14 @@ footer p {
     h2{
         font-size: 1.5rem;
         margin-left: 0;
-        margin-block: .15em;
-    }
-    h3{
-        font-size: 1.25em;    
+        margin-block: .15rem;
     }
 
-    .proyecto-img {
+    h3,.titulo-producto {
+        font-size: 1.25rem;    
+    }
+
+    .proyecto-img, .producto-img {
         width: 100%;
     }
 }
@@ -368,7 +423,7 @@ footer p {
         width: 90%;
         margin: auto;
         gap: .25rem;
-        margin-bottom: .5em;
+        margin-bottom: .5rem;
     }
 
     .proyecto{
@@ -382,7 +437,7 @@ footer p {
         margin-top: 1rem;
     }
 
-    .proyecto-img {
+    .proyecto-img, .producto-img {
         transition: transform 0.3s ease;
         min-height: 45vh;
         width: 90%;
@@ -405,8 +460,8 @@ footer p {
 }
 
 .logoCliente img {
-    max-height: 2.5em;
-    margin: .5em;
+    max-height: 2.5rem;
+    margin: .5rem;
 }
 
 .logosContactos{
@@ -431,7 +486,7 @@ footer p {
 }
 
 .firmaFooter {
-    font-size: .65em;
+    font-size: .65rem;
     margin-block: .25rem;
 }
 
