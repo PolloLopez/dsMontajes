@@ -4,37 +4,37 @@
     "categoria": "FERRETERIA",
     "titulo": "Valvula Plana",
     "descripcion": "Descripcion Valvula Plana",
-    "img": "/img/ferreteria/valvula.jpg"
+    "img": "./img/ferreteria/valvula.jpg"
     },
     {
     "categoria": "FERRETERIA",
     "titulo": "Tuerca Inoxidable",
     "descripcion": "Whitworth y pulgadas",
-    "img": "/img/ferreteria/tuerca.hexagonal.png"
+    "img": "./img/ferreteria/tuerca.hexagonal.png"
     },
     {
         "categoria": "FERRETERIA",
         "titulo": "Valvula clapeta",
         "descripcion": "Descripcion opcional",
-        "img": "/img/ferreteria/valvula.webp"
+        "img": "./img/ferreteria/valvula.webp"
     },
     {
         "categoria": "FERRETERIA",
         "titulo": "Tornillo Allem",
         "descripcion": "Descripcion opcional",
-        "img": "/img/ferreteria/tornillo.allen.webp"
+        "img": "./img/ferreteria/tornillo.allen.webp"
     },
     {
         "categoria": "FERRETERIA",
         "titulo": "Valvula SEMI Plana",
         "descripcion": "Descripcion opcional",
-        "img": "/img/ferreteria/valvula2.jpg"
+        "img": "./img/ferreteria/valvula2.jpg"
     },
     {
         "categoria": "FERRETERIA",
         "titulo": "Valvula Redonda",
         "descripcion": "Descripcion opcional",
-        "img": "/img/ferreteria/valvula3.jpg"
+        "img": "./img/ferreteria/valvula3.jpg"
     },
     {
         "categoria": "FERRETERIA",

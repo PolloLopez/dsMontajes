@@ -27,12 +27,12 @@ const mostrarProductos = (productos, contenedor) => {
 
     productos.forEach((producto, index) => {
         const div = document.createElement("div");
-        div.classList.add("proyectoFerreteria"); // Clase para aplicar estilos
+        div.classList.add("proyecto-carousel"); // Clase para aplicar estilos
         div.innerHTML = `
-            <div class="tarjFerreteria">
-                <img class="producto-img" src="${producto.img}" alt="${producto.titulo}">
-                <h4 class="titulo-producto">${producto.titulo}</h4>
-                <p class="descrip-producto">${producto.descripcion}</p>
+            <div class="carousel-images">
+                <img class="proyecto-img" src="${producto.img}" alt="${producto.titulo}">
+                // <h4 class="titulo-producto none">${producto.titulo}</h4> 
+                // <p class="descrip-producto none">${producto.descripcion}</p>
             </div>
         `;
 

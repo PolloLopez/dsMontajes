@@ -16,7 +16,7 @@ cerrar.addEventListener("click", () => {
 let currentSlideFerreteria = 0; // Índice del slide actual de ferretería
 
 function moveSlideFerreteria(direction) {
-    const imagesFerreteria = document.querySelector('#carouselFerreteria .carousel-images');
+    const imagesFerreteria = document.querySelector('.carousel-images');
     const totalSlidesFerreteria = imagesFerreteria.children.length; // Número total de imágenes
     const slideWidthFerreteria = imagesFerreteria.children[0].clientWidth; // Ancho de cada imagen
 
