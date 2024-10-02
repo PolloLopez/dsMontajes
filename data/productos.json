@@ -40,18 +40,18 @@
         "categoria": "FERRETERIA",
         "titulo": "Tornillos fresados 2",
         "descripcion": "Descripcion opcional",
-        "img": "/img/ferreteria/tornillos.fresados.png"
+        "img": "./img/ferreteria/tornillos.fresados.png"
     },
     {
         "categoria": "FERRETERIA",
         "titulo": "Tornillos fresados 2",
         "descripcion": "Descripcion opcional",
-        "img": "/img/ferreteria/tornillos.fresados.png"
+        "img": "./img/ferreteria/tornillos.fresados.png"
     },
     {
         "categoria": "FERRETERIA",
         "titulo": "Tornillo c/ tuerca",
         "descripcion": "Descripcion opcional",
-        "img": "/img/ferreteria/tornilloCTuerca.png"
+        "img": "./img/ferreteria/tornilloCTuerca.png"
     }
 ]

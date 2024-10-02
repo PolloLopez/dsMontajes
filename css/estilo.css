@@ -128,13 +128,13 @@ h3 {
 
 /* Servicios */
 
-.servicios {
+.tarjetas {
     display: flex;
     justify-content: space-between; /* Asegura que haya espacio entre las tarjetas */
     gap: .75em;
 }
 
-.servicio {
+/* .tarjeta {
     background-color: var(--metal);
     border-radius: .75rem;
     width: 31%;
@@ -142,23 +142,23 @@ h3 {
     flex-direction: column;
     padding: .5rem;
     box-sizing: border-box;
-    flex-grow: 1; /* Permite que esta sección crezca para llenar el espacio */
-}
+    flex-grow: 1; /Permite que esta sección crezca para llenar el espacio 
+} */
 
-.serv-img {
+.tarj-img {
     width: 100%;
     height: 40vh; /* Fija una altura para todas las imágenes */
     object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
     border-radius: .75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5em;
 }
 
-.servicio-descripcion {
-    margin-inline: .5rem;
+.tarjeta-descrip {
+    display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
-    line-height: 1.5rem;
+    margin-bottom: .75rem;
     flex-grow: 1; /* Permite que la descripción también crezca y ajuste la altura */
+    font-size: 1.1em;
 }
 
 /* Clienes */
@@ -188,28 +188,50 @@ h3 {
     box-sizing: border-box;
 }
 
-/* .proyecto-carousel {
+.carousel {
     position: relative;
     display: flex;
     overflow: hidden;
-} */
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: fit-content;
-    max-width: 100%;
+    gap: .75rem;
 }
 
-.proyecto-img {
-    width: 100%;
+.carousel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    gap: .75rem;
+}
+
+.carousel-imagen {
     transition: transform 0.3s ease;
-    object-fit: cover;
-    border-radius: 1rem;
+    object-fit: cover; /* Mantiene el contenido sin distorsión */
+    border-radius: 1em;
     border: 1px solid var(--azul);
-    background-color: transparent;
-    max-height: 45dvh;
-    margin-inline: .25rem ;
+    background-color: var(--blanco);
+    max-width: 18dvh;
+    height: 20dvh; /* Altura fija para que todas las imágenes sean iguales */
+}
+
+.proyecto img:hover {
+    transform: scale(1.05);
+}
+
+.titulo-producto{
+    display: flex;
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+.descrip-producto {
+    font-size: 1rem;
+    padding-bottom: .25rem;
+    padding-inline: .5rem;
+    text-align: center; /* Centra el texto dentro del párrafo */
 }
 
 button.prev, button.next {
@@ -233,22 +255,6 @@ button.prev {
 button.next {
     right: .25rem;
 }
-
-.titulo-producto{
-    font-size: 1.2rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--azul);
-}
-
-.descrip-producto {
-    margin: auto;
-    font-size: 1rem;
-    padding-bottom: .5rem;
-    padding-inline: .75rem;
-    height: 2.5rem;
-}
-
 
 /* MECANIZADOS */
 .text-mecanizados {
@@ -326,9 +332,6 @@ footer p {
         font-size: 1.25rem;    
     }
 
-    .proyecto-img, .producto-img {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 550px) {
@@ -370,21 +373,20 @@ footer p {
         height: 5rem;
     }
 
-    .servicios{
+    .tarjetas{
         display: flex;
         flex-direction: column;
     }
 
-    .servicio {
+    /* .tarjetaa {
         width: 90%;
         margin: auto;
         gap: .25rem;
         margin-bottom: .5rem;
-    }
+    } */
 
     .proyecto{
-        display: grid;
-        width: 100%;
+
         margin: auto;
     }
         
@@ -393,23 +395,7 @@ footer p {
         margin-top: 1rem;
     }
 
-    .proyecto-img, .producto-img {
-        transition: transform 0.3s ease;
-        min-height: 45vh;
-        width: 90%;
-    }
-
-    .proyecto img:hover {
-        transform: scale(1.1);
-    }
-    
-    .descrip-proyecto {
-        margin: auto;
-        padding-bottom: 3.5rem;
-        padding-inline: .5rem;
-    }  
-
-    /* Clienes */
+ /* Clienes */
 
 .clientes-logos {
     width: 95%;

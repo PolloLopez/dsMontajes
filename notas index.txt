@@ -162,3 +162,24 @@ er>
 </body>
 
 </html>
+
+
+
+
+
+// Función para mostrar productos en el DOM
+const mostrarProductos = (productos, contenedor) => {
+    contenedor.innerHTML = ""; // Limpiar el contenedor antes de agregar los productos
+
+    productos.forEach((producto, index) => {
+        const div = document.createElement("div");
+        div.innerHTML = `
+            <div class="carousel-imagenes">
+                <img class="carousel-imagen" src="${producto.img}" alt="${producto.titulo}">
+                <h4 class="titulo-producto none">${producto.titulo}</h4>
+                <p class="descrip-producto">${producto.titulo}</p>
+            </div>
+        `;
+        contenedor.appendChild(div);
+    });
+};

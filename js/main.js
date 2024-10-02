@@ -12,61 +12,59 @@ cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
 });
 
-// Carousel de ferretería
-let currentSlideFerreteria = 0; // Índice del slide actual de ferretería
+// Carousel de proyectos
+let currentSlideProyectos = 0; // Índice del slide actual de proyectos
 
-function moveSlideFerreteria(direction) {
-    const imagesFerreteria = document.querySelector('.carousel-images');
-    const totalSlidesFerreteria = imagesFerreteria.children.length; // Número total de imágenes
-    const slideWidthFerreteria = imagesFerreteria.children[0].clientWidth; // Ancho de cada imagen
+function moveSlideProyectos(direction) {
+    console.log(`Moviendo el carrusel de proyectos en dirección: ${direction}`);
+
+    const imagesFerreteria = document.querySelector('#carouselFerreteria .carousel-imagenes');
+    const totalSlidesFerreteria = imagesFerreteria.children.length;
+    const slideWidthFerreteria = imagesFerreteria.children[0].clientWidth;
+
 
     // Actualiza el slide actual
-    currentSlideFerreteria = currentSlideFerreteria + direction;
+    currentSlideProyectos = currentSlideProyectos + direction;
 
-    // Si estamos en la primera imagen, no permitir ir hacia atrás
+    // Control de límites para evitar mover fuera de los límites
     if (currentSlideFerreteria < 0) {
         currentSlideFerreteria = 0;
     }
 
-    // Si estamos en la última imagen, mantenerla alineada al borde derecho
     if (currentSlideFerreteria >= totalSlidesFerreteria - 1) {
         currentSlideFerreteria = totalSlidesFerreteria - 1;
         imagesFerreteria.style.transform = `translateX(calc(-${currentSlideFerreteria * slideWidthFerreteria}px + 100% - ${slideWidthFerreteria}px))`;
     } else {
-        // Transición de las imágenes
         imagesFerreteria.style.transform = `translateX(-${currentSlideFerreteria * slideWidthFerreteria}px)`;
     }
 }
 
-// Manejo de deslizamiento táctil para el carrusel de ferretería
-let startXFerreteria = 0;
-let isDraggingFerreteria = false;
+// Manejo de deslizamiento táctil para el carrusel de proyectos
+let startXProyectos = 0;
+let isDraggingProyectos = false;
 
-const imagesFerreteria = document.querySelector('#carouselFerreteria .carousel-images');
+const imagesProyectos = document.querySelector('#carouselProyectos .carousel-imagenes');
 
-// Capturar el toque inicial
-imagesFerreteria.addEventListener('touchstart', (e) => {
-    startXFerreteria = e.touches[0].clientX; // Coordenada X del toque
-    isDraggingFerreteria = true;
+imagesProyectos.addEventListener('touchstart', (e) => {
+    startXProyectos = e.touches[0].clientX;
+    isDraggingProyectos = true;
 });
 
-// Detectar el movimiento del dedo
-imagesFerreteria.addEventListener('touchmove', (e) => {
-    if (isDraggingFerreteria) {
-        let touchXFerreteria = e.touches[0].clientX;
-        let moveXFerreteria = startXFerreteria - touchXFerreteria;
+imagesProyectos.addEventListener('touchmove', (e) => {
+    if (isDraggingProyectos) {
+        let touchXProyectos = e.touches[0].clientX;
+        let moveXProyectos = startXProyectos - touchXProyectos;
 
-        if (moveXFerreteria > 50) { // Si se desliza a la izquierda
-            moveSlideFerreteria(1); // Avanza el carrusel
-            isDraggingFerreteria = false; // Evita múltiples deslizamientos
-        } else if (moveXFerreteria < -50) { // Si se desliza a la derecha
-            moveSlideFerreteria(-1); // Retrocede el carrusel
-            isDraggingFerreteria = false;
+        if (moveXProyectos > 50) {
+            moveSlideProyectos(1); // Avanza el carrusel
+            isDraggingProyectos = false;
+        } else if (moveXProyectos < -50) {
+            moveSlideProyectos(-1); // Retrocede el carrusel
+            isDraggingProyectos = false;
         }
     }
 });
 
-// Cuando se levanta el dedo
-imagesFerreteria.addEventListener('touchend', () => {
-    isDraggingFerreteria = false;
+imagesProyectos.addEventListener('touchend', () => {
+    isDraggingProyectos = false;
 });

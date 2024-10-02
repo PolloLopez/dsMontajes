@@ -27,12 +27,11 @@ const mostrarProductos = (productos, contenedor) => {
 
     productos.forEach((producto, index) => {
         const div = document.createElement("div");
-        div.classList.add("proyecto-carousel"); // Clase para aplicar estilos
+        div.classList.add("carousel-imagenes"); // Aplica la clase "carousel-imagenes"
         div.innerHTML = `
-            <div class="carousel-images">
-                <img class="proyecto-img" src="${producto.img}" alt="${producto.titulo}">
-                // <h4 class="titulo-producto none">${producto.titulo}</h4> 
-                // <p class="descrip-producto none">${producto.descripcion}</p>
+            <div id="carouselFerreteria" class="carousel-imagenes">
+                <img class="carousel-imagen" src="${producto.img}" alt="${producto.titulo}">
+
             </div>
         `;
 
@@ -40,3 +39,26 @@ const mostrarProductos = (productos, contenedor) => {
         contenedor.appendChild(div);
     });
 };
+
+function moveSlide(carruselId, direction) {
+    console.log(`Moviendo el carrusel ${carruselId} en dirección: ${direction}`);
+
+    const images = document.querySelector(`#${carruselId} .carousel-imagenes`);
+    const totalSlides = images.children.length;
+    const slideWidth = images.children[0].clientWidth;
+    let currentSlide = 0; // Define una variable específica del carrusel
+
+    // Actualiza el índice del slide actual según la dirección
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+        currentSlide = 0;
+    }
+
+    if (currentSlide >= totalSlides - 1) {
+        currentSlide = totalSlides - 1;
+        images.style.transform = `translateX(calc(-${currentSlide * slideWidth}px + 100% - ${slideWidth}px))`;
+    } else {
+        images.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+}
