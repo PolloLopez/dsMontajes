@@ -30,6 +30,8 @@
 
 /* body, contiene el header, main y footer */
 
+
+
 body {
     background-color: var(--gris-claro);
     color: var(--gris-oscuro);
@@ -116,15 +118,15 @@ h3 {
     color: var(--azul);
 }
 
-.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados, .ferreteria {
+/* .nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados, .ferreteria {
     margin: auto;
-    width: 96%;
+    width: 100%;
     margin-bottom: 2.5rem;
-}
+} */
 
-.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados,p {
+/* .nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados,p {
     margin: .5rem .5rem 1rem 1rem ;
-}
+} */
 
 /* Servicios */
 
@@ -134,24 +136,15 @@ h3 {
     gap: .75em;
 }
 
-/* .tarjeta {
-    background-color: var(--metal);
-    border-radius: .75rem;
-    width: 31%;
-    display: flex;
-    flex-direction: column;
-    padding: .5rem;
-    box-sizing: border-box;
-    flex-grow: 1; /Permite que esta sección crezca para llenar el espacio 
-} */
 
 .tarj-img {
     width: 100%;
-    height: 40vh; /* Fija una altura para todas las imágenes */
+    height: 40vh;  /*Fija una altura para todas las imágenes */
     object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
     border-radius: .75rem;
     margin-bottom: .5em;
-}
+
+} 
 
 .tarjeta-descrip {
     display: flex;
@@ -188,36 +181,51 @@ h3 {
     box-sizing: border-box;
 }
 
-.carousel {
-    position: relative;
+/* Estilos generales del carrusel */
+.carrusel {
     display: flex;
+    align-items: center;
+    width: 100%;
     overflow: hidden;
-    gap: .75rem;
+    position: relative;
 }
 
-.carousel-imagenes {
+.carrusel-items {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: center; 
-    gap: .75rem;
+    gap: .25em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: .5rem 0px;
 }
 
-.carousel-imagen {
-    transition: transform 0.3s ease;
-    object-fit: cover; /* Mantiene el contenido sin distorsión */
-    border-radius: 1em;
-    border: 1px solid var(--azul);
-    background-color: var(--blanco);
-    max-width: 18dvh;
-    height: 20dvh; /* Altura fija para que todas las imágenes sean iguales */
+.carrusel-item {
+    flex: 0 0 auto;
+    margin-right: 10px; /* Espacio entre imágenes */
+    transition: transform 0.3s ease-in-out;
 }
 
-.proyecto img:hover {
-    transform: scale(1.05);
+.carrusel-item:hover {
+    transform: scale(1.1);
 }
+
+/* Estilos para imágenes del carrusel de proyectos (tamaño más grande) */
+.proyecto-item img {
+    width: 200px; /* Tamaño de las imágenes del carrusel de proyectos */
+    height: 200px;
+    object-fit: cover;
+    border-radius: .25rem;
+}
+
+/* Estilos para imágenes del carrusel de ferretería (tamaño más pequeño) */
+.ferreteria-item img {
+    width: 100px; /* Tamaño de las imágenes del carrusel de ferretería */
+    height: 100px;
+    object-fit: cover;
+    border-radius: .25rem;
+
+}
+
 
 .titulo-producto{
     display: flex;
@@ -331,7 +339,6 @@ footer p {
     h3,.titulo-producto {
         font-size: 1.25rem;    
     }
-
 }
 
 @media screen and (max-width: 550px) {
@@ -378,15 +385,7 @@ footer p {
         flex-direction: column;
     }
 
-    /* .tarjetaa {
-        width: 90%;
-        margin: auto;
-        gap: .25rem;
-        margin-bottom: .5rem;
-    } */
-
     .proyecto{
-
         margin: auto;
     }
         
