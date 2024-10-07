@@ -35,6 +35,7 @@
 body {
     background-color: var(--gris-claro);
     color: var(--gris-oscuro);
+
 }
 
 header {
@@ -118,15 +119,15 @@ h3 {
     color: var(--azul);
 }
 
-/* .nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados, .ferreteria {
+.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados, .ferreteria {
     margin: auto;
     width: 100%;
     margin-bottom: 2.5rem;
-} */
+} 
 
-/* .nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados,p {
-    margin: .5rem .5rem 1rem 1rem ;
-} */
+.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contacto, .mecanizados, p {
+    margin: .5rem .5rem 2rem 1rem ;
+} 
 
 /* Servicios */
 
@@ -197,6 +198,7 @@ h3 {
     overflow-y: hidden;
     scroll-behavior: smooth;
     padding: .5rem 0px;
+    transition: transform 0.5s ease;
 }
 
 .carrusel-item {
@@ -338,6 +340,15 @@ footer p {
 
     h3,.titulo-producto {
         font-size: 1.25rem;    
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+    .logoCliente {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
