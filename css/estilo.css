@@ -29,13 +29,9 @@
 }
 
 /* body, contiene el header, main y footer */
-
-
-
 body {
     background-color: var(--gris-claro);
     color: var(--gris-oscuro);
-
 }
 
 header {
@@ -49,7 +45,6 @@ header {
 .logo {
     max-width: 5rem;
     border-radius: 2.5rem;
-    
 }
 
 .nav-list {
@@ -60,9 +55,9 @@ header {
     font-size: 1.5rem;
 }
 
-.nav-list a{
+.nav-list a {
     text-decoration: none;
-    color: var(--gris-claro);    
+    color: var(--gris-claro);
 }
 
 .abrir-menu,
@@ -79,11 +74,17 @@ header {
     font-size: 1.5rem;
 }
 
-h1, h2, h3, .titulo-producto {
+h1,
+h2,
+h3,
+.titulo-producto {
     font-family: 'Rakkas', sans-serif;
 }
 
-body, p, a, li {
+body,
+p,
+a,
+li {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -106,7 +107,7 @@ h1 {
     font-weight: 400;
 }
 
-h2{
+h2 {
     font-size: 1.9rem;
     color: var(--azul);
 }
@@ -118,43 +119,64 @@ h3 {
     color: var(--azul);
 }
 
-.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contactos, .mecanizados, .ferreteria {
+.nosotros,
+.divServicios,
+.clientes,
+.proyectos,
+.garantia,
+.contactos,
+.mecanizados,
+.ferreteria {
     margin: auto;
     margin-bottom: 2.5rem;
-} 
+}
 
-.nosotros, .divServicios, .clientes, .proyectos, .garantia, .contacto, .mecanizados {
-    margin: .5rem .5rem 2rem 1rem ;
-} 
+.nosotros,
+.divServicios,
+.clientes,
+.proyectos,
+.garantia,
+.contacto,
+.mecanizados {
+    margin: .5rem .5rem 2rem 1rem;
+}
 
 /* Servicios */
-
 .tarjetas {
     display: flex;
     justify-content: space-between; /* Asegura que haya espacio entre las tarjetas */
-    gap: .75em;
+    flex: 0 0 25%; /* Hace que cada imagen ocupe el 25% del carrusel visible */
+    /*max-width: 25%; /* Asegura que no se expanda más del 25% */
+    margin: .25em;
 }
 
+.tarjeta{
+    padding: .25em;
+}
 
 .tarj-img {
     width: 100%;
-    height: 40vh;  /*Fija una altura para todas las imágenes */
-    object-fit: cover; /* Las imágenes mantendrán su proporción y llenarán el área */
+    height: 40vh;     /*Fija una altura para todas las imágenes */
+    object-fit: cover;    /* Las imágenes mantendrán su proporción y llenarán el área */
     border-radius: .75rem;
-    margin-bottom: .5em;
+}
 
-} 
+.tarj-img-ferre{
+    width: 100%;
+    object-fit: cover;    /* Las imágenes mantendrán su proporción y llenarán el área */
+    border-radius: .75rem;
+    margin: .25em;
+}
 
 .tarjeta-descrip {
     display: flex;
     justify-content: center;
-    margin-bottom: .75rem;
-    flex-grow: 1; /* Permite que la descripción también crezca y ajuste la altura */
+    margin: .75rem;
+    flex-grow: 1;    /* Permite que la descripción también crezca y ajuste la altura */
     font-size: 1.1em;
 }
 
 /* Clienes */
-
 .clientes-logos {
     width: 90%;
     display: flex;
@@ -184,50 +206,42 @@ h3 {
 .carrusel {
     display: flex;
     align-items: center;
-    width: 100%;
-    overflow: hidden;
+    justify-content: space-between;
     position: relative;
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera del área visible */
 }
 
 .carrusel-items {
     display: flex;
-    gap: .25em;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    padding: .5rem 0px;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
+
+    /*width: calc(250px * 4); /* Multiplica por la cantidad total de imágenes */
+    
 }
 
 .carrusel-item {
     flex: 0 0 auto;
-    margin-right: 10px; /* Espacio entre imágenes */
-    transition: transform 0.3s ease-in-out;
+    width: 250px;
+    height: 200px;
 }
 
-.carrusel-item:hover {
-    transform: scale(1.1);
+.carrusel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 /* Estilos para imágenes del carrusel de proyectos (tamaño más grande) */
 .proyecto-item img {
-    width: 200px; /* Tamaño de las imágenes del carrusel de proyectos */
     height: 200px;
     object-fit: cover;
     border-radius: .25rem;
+    border-color: #FF6700;
 }
 
-/* Estilos para imágenes del carrusel de ferretería (tamaño más pequeño) */
-.ferreteria-item img {
-    width: 100px; /* Tamaño de las imágenes del carrusel de ferretería */
-    height: 100px;
-    object-fit: cover;
-    border-radius: .25rem;
-
-}
-
-
-.titulo-producto{
+.titulo-producto {
     display: flex;
     font-size: 1em;
     text-align: center;
@@ -239,10 +253,11 @@ h3 {
     font-size: 1rem;
     padding-bottom: .25rem;
     padding-inline: .5rem;
-    text-align: center; /* Centra el texto dentro del párrafo */
+    text-align: center;    /* Centra el texto dentro del párrafo */
 }
 
-button.prev, button.next {
+button.prev,
+button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -269,9 +284,12 @@ button.next {
     display: flex;
     margin: auto;
     /* background-image: url('../img/DSImg\ \(5\).jpeg'); */
-    background-size: cover; /* que cubra toda la sección */
-    background-position: center; /* Centra */
-    background-repeat: no-repeat; /* Evita que se repita */
+    background-size: cover;
+    /* que cubra toda la sección */
+    background-position: center;
+    /* Centra */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
     color: var(--gris-oscuro);
     padding: .5rem;
     border-radius: .5rem;
@@ -307,9 +325,10 @@ button.next {
 footer {
     display: flex;
     justify-content: center;
-    padding:.15rem;
+    padding: .15rem;
     background-color: var(--azul);
 }
+
 footer p {
     color: var(--gris-claro);
     font-size: 1em;
@@ -322,16 +341,18 @@ footer p {
 
 
 /* Medias Queries */
-@media (max-width: 768px){
+@media (max-width: 768px) {
     header {
         font-size: 1rem;
         padding: .25rem;
     }
+
     .nav-list {
         gap: .5rem;
         font-size: .75rem;
     }
-    .logo{
+
+    .logo {
         max-width: 3.5rem;
     }
 
@@ -341,19 +362,22 @@ footer p {
     h1 {
         font-size: 2rem;
     }
-    h2{
+
+    h2 {
         font-size: 1.5rem;
         margin-left: 0;
         margin-block: .15rem;
     }
 
-    h3,.titulo-producto {
-        font-size: 1.25rem;    
+    h3,
+    .titulo-producto {
+        font-size: 1.25rem;
     }
 
     .tarjetas {
         grid-template-columns: 1fr;
     }
+
     .logoCliente {
         display: flex;
         flex-wrap: wrap;
@@ -362,11 +386,12 @@ footer p {
 }
 
 @media screen and (max-width: 550px) {
+
     .abrir-menu,
     .cerrar-menu {
         display: block;
     }
-    
+
     .nav {
         opacity: 0;
         visibility: hidden;
@@ -392,7 +417,8 @@ footer p {
         flex-direction: column;
         align-items: end;
     }
-    .nav-list a{
+
+    .nav-list a {
         color: var(--gris-claro);
     }
 
@@ -400,37 +426,37 @@ footer p {
         height: 5rem;
     }
 
-    .tarjetas{
+    .tarjetas {
         display: flex;
         flex-direction: column;
     }
 
-    .proyecto{
+    .proyecto {
         margin: auto;
     }
-        
+
     .proyecto h3 {
         margin-left: 1.75rem;
         margin-top: 1rem;
     }
 
- /* Clienes */
+    /* Clienes */
 
-.clientes-logos {
-    width: 95%;
-}
+    .clientes-logos {
+        width: 95%;
+    }
 
-.logoCliente img {
-    max-height: 2.5rem;
-    margin: .5rem;
-}
+    .logoCliente img {
+        max-height: 2.5rem;
+        margin: .5rem;
+    }
 
-.logosContactos{
-    width: 90%;
-    margin: auto;
-}
+    .logosContactos {
+        width: 90%;
+        margin: auto;
+    }
 
-/* footer {
+    /* footer {
     font-size: .7rem;
     margin-block: .1rem;
 }
@@ -452,4 +478,3 @@ footer p {
 } */
 
 }
-
