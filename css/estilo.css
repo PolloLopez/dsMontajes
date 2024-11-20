@@ -349,15 +349,12 @@ footer p {
 
     .nav-list {
         gap: .5rem;
-        font-size: .75rem;
+        font-size: 1rem;
     }
 
     .logo {
         max-width: 3.5rem;
     }
-
-
-
 
     h1 {
         font-size: 2rem;
@@ -376,6 +373,10 @@ footer p {
 
     .tarjetas {
         grid-template-columns: 1fr;
+    }
+
+    .tarj-img{
+        height: 20vh;
     }
 
     .logoCliente {
@@ -456,7 +457,7 @@ footer p {
         margin: auto;
     }
 
-    /* footer {
+footer {
     font-size: .7rem;
     margin-block: .1rem;
 }
@@ -475,6 +476,6 @@ footer p {
 .firmaFooter {
     font-size: .65rem;
     margin-block: .25rem;
-} */
+}
 
 }
